@@ -1,0 +1,26 @@
+<snippet>
+  <content><![CDATA[
+var updateDocument = function(db, callback) {
+  // Get the ${1:documents_name} collection
+  var collection = db.collection('$1');
+  // operator see: http://docs.mongodb.org/manual/reference/operator/
+  collection.update({${2:criteria_via_operator}}, function(err, result) {
+      if(err) {
+      // Handle the error.
+      // callback(err);
+      $3
+    } else {
+      //console.log("Updated the matched records");
+      $4
+
+      // callback(result);
+    }
+  });  
+}
+
+$0
+]]></content>
+  <tabTrigger>mongodb-node-update</tabTrigger>
+  <scope>source.js</scope>
+  <description>Update against mongodb via node driver.</description>
+</snippet>

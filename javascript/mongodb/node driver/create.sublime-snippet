@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[
+
+var insertDocuments = function(db, callback) {
+  // Get the ${1:documents_name} collection
+  var collection = db.collection('$1');
+  var documents = [$2];
+  // Insert some documents
+  collection.insert(documents, function(err, result) {
+    if(err) {
+      // Handle the error.
+      // callback(err);
+      $3
+    } else {
+      //console.log("Found the following records");
+      $4
+
+      // callback(docs);
+    }
+  });
+}
+
+$0
+]]></content>
+  <tabTrigger>mongodb-node-create</tabTrigger>
+  <scope>source.js</scope>
+  <description>Create against mongodb via node driver.</description>
+</snippet>

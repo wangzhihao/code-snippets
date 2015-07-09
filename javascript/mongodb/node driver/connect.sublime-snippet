@@ -1,0 +1,24 @@
+<snippet>
+  <content><![CDATA[
+var MongoClient = require('mongodb').MongoClient;
+
+// Connection URL
+var url = 'mongodb://${1:localhost}:${2:27017}/${3:dbname}';
+// Use connect method to connect to the Server
+MongoClient.connect(url, function(err, db) {
+  if(err) {
+    // Handle the error.
+    $4
+  } else {
+    //console.log("Connected correctly to server");
+    $5
+  }
+  db.close();
+});
+
+$0
+]]></content>
+  <tabTrigger>mongodb-node-connect</tabTrigger>
+  <scope>source.js</scope>
+  <description>Connect to mongodb via node driver.</description>
+</snippet>

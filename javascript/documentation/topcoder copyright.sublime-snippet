@@ -1,0 +1,14 @@
+<snippet>
+  <content><![CDATA[
+/**
+ * This code is copyright (c) 2015 TopCoder Corporation
+ * author: TCSASSEMBLER
+ * version ${1:1.0}
+ */
+
+ $0
+]]></content>
+  <tabTrigger>topcoder-copyright</tabTrigger>
+  <scope>source.js</scope>
+  <description>Add topcoder's copyright to the top of code</description>
+</snippet>

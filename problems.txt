@@ -1,0 +1,1 @@
+1. How to insert snippet not only the place where the cursor is but also any place I want? For example, I want to insert some include directive or global variable on the top and then the other logic at the cursor.

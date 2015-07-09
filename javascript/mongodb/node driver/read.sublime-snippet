@@ -1,0 +1,28 @@
+<snippet>
+  <content><![CDATA[
+
+var findDocuments = function(db, callback) {
+  // Get the ${1:documents_name} collection
+  var collection = db.collection('$1');
+  // Find some documents
+  // operator see: http://docs.mongodb.org/manual/reference/operator/
+  collection.find({${2:criteria_via_operator}}).toArray(function(err, docs) {
+    if(err) {
+      // Handle the error.
+      // callback(err);
+      $3
+    } else {
+      //console.log("Found the following records");
+      $4
+
+      // callback(docs);
+    }
+  });      
+}
+
+$0
+]]></content>
+  <tabTrigger>mongodb-node-read</tabTrigger>
+  <scope>source.js</scope>
+  <description>Query against mongodb via node driver.</description>
+</snippet>
